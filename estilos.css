@@ -5,7 +5,6 @@ body {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     color: #fff;
     text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,8 +17,9 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    align-items: center; 
+    height: 50%; 
 }
-
 p {
     font-size: 1.1rem;
     max-width: 600px;
@@ -63,6 +63,12 @@ p {
     }
 }
 
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+
 .stars {
     position: absolute;
     width: 100%;
@@ -73,10 +79,6 @@ p {
     animation: moveStars 200s linear infinite;
 }
 
-@keyframes moveStars {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 5000px; }
-}
 
 .icono {
     position: absolute;
@@ -127,7 +129,7 @@ p {
 
 button {
     background-color: #fff;
-    border: 2px solid #555;
+    border: 5px solid rgb(11, 3, 124);
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 1rem;
